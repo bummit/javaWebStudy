@@ -1,0 +1,28 @@
+.cls1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.cls2{
+    font-size: 20px;
+    text-align: center;
+}
+
+table {
+	align-content: center;
+    border: 1px;
+}
+
+.tr1 { 
+    align-self: center;
+    background-color: lightgreen;
+}
+
+.tr2 {
+    align-self: center;
+}
+
+td {
+    width: 7%;
+    text-align: center;
+}

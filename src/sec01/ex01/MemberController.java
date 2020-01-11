@@ -22,18 +22,17 @@ public class MemberController extends HttpServlet {
 
 	
 	public void init() throws ServletException {
-		memberDAO = new MemberDAO();
+		memberDAO = MemberDAO.getInstance();
 	}
 
 	protected void doHandle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		List membersList = memberDAO.listMembers();
-		request.setAttribute("memberList", membersList);
-		RequestDispatcher dispatch = request.getRequestDispatcher("/test01/listMembers.jsp");
+		System.out.println("membersList.size(): " + membersList.size());
+		request.setAttribute("membersList", membersList);
+		RequestDispatcher dispatch = request.getRequestDispatcher("/test01/listMember.jsp");
 		dispatch.forward(request, response);
-		
-		
 	}
 	
 	
