@@ -1,4 +1,4 @@
-package sec01.ex01;
+package sec02.ex01;
 
 import java.util.Date;
 
@@ -16,31 +16,6 @@ public class MemberVO {
 	private String detailedAddress;
 	private String referAddress;
 	private Date joinDate;
-	
-	
-	
-	
-	public MemberVO() {
-	}
-
-	public MemberVO(String username, String password, String name, String email, String phone1, String phone2,
-			String phone3, String zipCode, String strAddress, String address, String detailedAddress,
-			String referAddress) {
-		super();
-		this.username = username;
-		this.password = password;
-		this.name = name;
-		this.email = email;
-		this.phone1 = phone1;
-		this.phone2 = phone2;
-		this.phone3 = phone3;
-		this.zipCode = zipCode;
-		this.strAddress = strAddress;
-		this.address = address;
-		this.detailedAddress = detailedAddress;
-		this.referAddress = referAddress;
-	}
-	
 	public String getUsername() {
 		return username;
 	}
@@ -118,14 +93,6 @@ public class MemberVO {
 	}
 	public void setJoinDate(Date joinDate) {
 		this.joinDate = joinDate;
-	}
-
-	@Override
-	public String toString() {
-		return "MemberVO [username=" + username + ", password=" + password + ", name=" + name + ", email=" + email
-				+ ", phone1=" + phone1 + ", phone2=" + phone2 + ", phone3=" + phone3 + ", zipCode=" + zipCode
-				+ ", strAddress=" + strAddress + ", address=" + address + ", detailedAddress=" + detailedAddress
-				+ ", referAddress=" + referAddress + ", joinDate=" + joinDate + "]";
 	}
 	
 	

@@ -1,4 +1,4 @@
-package sec01.ex01;
+package sec02.ex01;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -81,7 +81,7 @@ public class MemberDAO {
 	}
 	
 	public void addMember(MemberVO vo) {
-		System.out.println("수행된거니");
+		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		
@@ -100,7 +100,6 @@ public class MemberDAO {
 			pstmt.setString(10, vo.getAddress());
 			pstmt.setString(11, vo.getDetailedAddress());
 			pstmt.setString(12, vo.getReferAddress());
-			pstmt.executeUpdate();
 					
 		}catch(Exception e){
 			e.printStackTrace();
