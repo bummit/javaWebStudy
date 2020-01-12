@@ -80,7 +80,7 @@ public class MemberDAO {
 		return membersList;	
 	}
 	
-	public void addMember(MemberVO vo) {
+	public void addMember(MemberVO membervo) {
 		System.out.println("수행된거니");
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -88,18 +88,18 @@ public class MemberDAO {
 		try {
 			conn = getConnection();
 			pstmt = conn.prepareStatement("insert into mymember values(?,?,?,?,?,?,?,?,?,?,?,?,SYSDATE)");
-			pstmt.setString(1, vo.getUsername());
-			pstmt.setString(2, vo.getPassword());
-			pstmt.setString(3, vo.getName());
-			pstmt.setString(4, vo.getPhone1());
-			pstmt.setString(5, vo.getPhone2());
-			pstmt.setString(6, vo.getPhone3());
-			pstmt.setString(7, vo.getEmail());
-			pstmt.setString(8, vo.getZipCode());
-			pstmt.setString(9, vo.getStrAddress());
-			pstmt.setString(10, vo.getAddress());
-			pstmt.setString(11, vo.getDetailedAddress());
-			pstmt.setString(12, vo.getReferAddress());
+			pstmt.setString(1, membervo.getUsername());
+			pstmt.setString(2, membervo.getPassword());
+			pstmt.setString(3, membervo.getName());
+			pstmt.setString(4, membervo.getPhone1());
+			pstmt.setString(5, membervo.getPhone2());
+			pstmt.setString(6, membervo.getPhone3());
+			pstmt.setString(7, membervo.getEmail());
+			pstmt.setString(8, membervo.getZipCode());
+			pstmt.setString(9, membervo.getStrAddress());
+			pstmt.setString(10, membervo.getAddress());
+			pstmt.setString(11, membervo.getDetailedAddress());
+			pstmt.setString(12, membervo.getReferAddress());
 			pstmt.executeUpdate();
 					
 		}catch(Exception e){
